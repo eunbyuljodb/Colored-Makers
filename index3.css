@@ -1,0 +1,35 @@
+h1{
+    /*텍스트를 중앙에 정렬*/
+    text-align:center;
+}
+
+/*마커를 담을 박스를 만든다. marker에 아무 내용이 없으면 색을 넣어도
+웹페이지에 나타나지 않는다.*/
+.container{
+    /*색을 그대로 영어로 쓸 수 있지만 rgb나 CYMK같이 색의 조합을 이용해
+    색을 나타낼 수 있다.*/
+    background-color:rgb(255,255,255);
+    /* 콘텐츠와 컨테이너 사이에 여백을 주기 위해 padding을 쓴다
+    앞에 10px는 top,bottom 0은 left, right*/
+    padding:10px 0;
+}
+.marker{
+    /*마커의 길이, 위치를 나타낸다*/
+    width:200px;
+    height:25px;
+    /*마커들을 구분하기 위해 마커 사이에 여백을 넣는다.*/
+    /*앞의 10px는 top,bottom  auto는 left,right를 나타낸다. */
+    margin:10px auto;
+}
+
+.one{
+    background-color:rgb(0,0,0);
+}
+
+.two{
+    background-color:rgb(0,0,0);
+}
+
+.three{
+    background-color:rgb(0,0,0);
+}
