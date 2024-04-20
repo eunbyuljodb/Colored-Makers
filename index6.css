@@ -1,0 +1,73 @@
+h1{
+    /*텍스트 중앙 정렬*/
+    text-align:center;
+}
+
+.container{
+    background-color:white;
+    /*마커들을 중앙에 정렬시키기 위해선 container 클래스를 중앙에 정렬해야한다.
+    왜냐하면 마커들이 div class = container 안에 중첩되어있기 때문이다*/
+    margin:10px auto;
+    /*container와 마커 사이에 여백을 둔다.*/
+    padding:10px 0;
+}
+
+.marker{
+    /*마커들에 공통적으로 부여할 스타일*/
+    /*사이즈*/
+    width:200px;
+    height:25px;
+    /*container 안에서 위아래로 각각 마커들이 10px 위아래 여백을 두고 
+    양옆 여백 auto값을 가져서 중앙에 정렬됨*/
+    margin:10px auto;
+}
+
+.red{
+    /*그라데이션으로 나타냄*/
+    /*선형그라데이션은 방향, 색깔 최소 2개로 나타냄. 
+    방향을 적지 않으면 위에서 아래로(180deg)방향이 된다.*/
+    /*색은 rgb, hex(16진수), hsl(색조,채도,밝기) 등으로 나타낼 수 있다.
+    a를 추가하면 alpha channel로 불투명도 조절이 가능하다.*/
+    background:linear-gradient(rgb(122,74,14), rgb(245,62,113),
+    rgb(162,27,27));
+    /*그림자를 만든다.
+    offsetX offsetY blur-radius spread-radius color
+    1. 양수면 오른쪽, 음수면 왼쪽 / 2. 양수면 아래로 음수면 위로 /
+    3. 그림자 블러처리 4. 그림자의 크기 5. 그림자 색깔깔*/
+    box-shadow:0 0 20px 0 rgba(83,14,14,0.8);
+}
+
+.green{
+    /*#123456 12:빨간색 34:초록색 56:파란색*/
+    background:linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow:0 0 20px 0 #3B7E20CC;
+}
+
+.blue{
+    /*hsl: 색조(0은 빨간색, 120은 초록색, 240은 파란색)
+    채도,밝기(퍼센트로 나타냄)*/
+    background:linear-gradient(hsl(186,76%,16%), hsl(223,90%,60%),
+    hsl(240,56%,42%));
+    box-shadow:0 0 20px 0 hsla(223,59%,31%,0.8);
+}
+
+.cap, .sleeve{
+    /*sleeve를 오른쪽으로 밀어내기 위해서는 cap,sleeve를 한줄에 나타내야한다.
+    div는 블럭요소이므로 인라인요소로 바꾼다*/
+    display:inline-block;
+}
+
+.cap{
+    width:60px;
+    height:25px;
+}
+
+.sleeve{
+    width:110px;
+    height:25px;
+    /*a를 추가하면 불투명도 조절이 가능하다. 최대 1.0까지 된다.(혹은100%)*/
+    background-color:rgba(255,255,255,0.5);
+    /*왼쪽에 테두리를 만든다.
+    두께, 선의 스타일, 색상*/
+    border-left:10px double rgba(0,0,0,0.75);
+}
